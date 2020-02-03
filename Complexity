@@ -1,0 +1,29 @@
+Running time of algorithm depends on:
+    1) no.of processors
+    2) read and write speed to memory
+    3) machine architecture(32-bit or 64-bit)
+    4) input
+    
+Time complexity analysis of algorithm depends only on
+    1) input
+    
+Asymptotic notation:
+Big-Oh: upper bound of rate of growth of time 
+        O(g(n)) = { f(n) : there exist some constants c and n0 such that f(n)<=c*g(n) for n>n0
+Omega: lower bound of rate of growth of time
+        Omega(g(n)) = { f(n) : there exist some constants c and n0 such that 0<=c*g(n)<f(n) for n>n0
+Theta: tight bound of rate of growth of time
+        Theta(g(n)) = { f(n) : there exist some constants c1,c2 and n0 such that 0<c1*g(n)<=f(n)<=c2*g(n) for n>n0
+        
+We analyze time complexity for
+    1)very large input sizes
+    2) worst case scenario
+    
+General rules for time complexity analysis:
+    1)drop all lower order terms
+    2)drop constant multiplier
+
+Running time = Sigma(Running time of all fragments)      sequential statements
+running time = max(running timeof fragments)             conditional statements
+
+Space Complexity: - measure of how efficient your code is in terms of memory used.
