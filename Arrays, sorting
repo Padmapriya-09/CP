@@ -1,0 +1,60 @@
+Pointers: - int a=5;
+            int *p=&a;
+            print p;       //&a     
+            print *p;      //5     dereferencing
+            
+pointers and Arrays: -   int A[5];      //A is a pointer to 1st element in the array
+                         int *A = (int *) malloc(5 * sizeof(int));  //same as A[5]
+                         print A        //address of 1st element
+                         &A[i] = (A+i)
+                         A[i] = *(A+i)
+pointers and Multidimensional arrays:-          int B[2][3];
+                                                int (*p)[3] = B;    //points to 1-D array of 3 integers
+                                                B[i][j] = *(B[i]+j)
+                                                        = *(*(B+i)+j)
+Vectors: - vector<int> V    //declares an empty vector
+           vector<int> V(100,1)    //declares vector of size 100 with all elements initialized to 1
+           V.push_back(new_value);    //adding new element to vector
+           V.pop_back()    //deleting last element of vector
+           
+Sorting Algorithms: -
+                                Best                Average             Worst
+        Quick Sort              Omega(n*log n)      Theta(n*log n)      O(n^2)
+        Bubble Sort             Omega(n)            Theta(n^2)          O(n^2)
+        Merge Sort              Omega(n*log n)      Theta(n*log n)      O(n*log n)
+        Insertion Sort          Omega(n)            Theta(n^2)          O(n^2)
+        Selection Sort          Omega(n^2)          Theta(n^2)          O(n^2)
+        Heap Sort               Omega(n*log n)      Theta(n*log n)      O(n*log n)
+        Radix Sort              Omega(nk)           Theta(nk)           O(nk)
+        Bucket Sort             Omega(n+k)          Theta(n+k)          O(n^2)
+        
+classification of sorting is based on: -
+    1. time complexity
+    2. space complexity and memory usage
+    3. stability
+    4. internal sort or external sort: - internal - all records in MM or RAM
+                                         external - records are on disc or tapes
+    5. recursive or non-recursive: - recursive     - quick,merge
+                                     non-recursive - insertion.selection
+
+Insertion sorting: -
+        INSERTION-SORT(A)
+        for i = 1 to n
+   	        key ← A [i]
+    	    j ← i – 1
+  	        while j > = 0 and A[j] > key
+   		        A[j+1] ← A[j]
+   		        j ← j – 1
+   	        End while 
+   	        A[j+1] ← key
+        End for
+        
+Merge Sort: -
+    merge: The first element of both lists is compared. If sorting in ascending order, the smaller element among two becomes a new element of the sorted list. This procedure is repeated until both the smaller sublists are empty and the newly combined sublist covers all the elements of both the sublists.
+
+Quick sort: - chosing pivot element and sorting arrays to the left and right of pivot element
+
+Selection sort: - find min_index and swap it with the leftmost index
+                    time complexity is O(n^2) but space complexity is O(1)
+                    
+Bubble Sort: - check if adjacent elements are in correct position are not. Continuing in this way results in array whose last element is in correct position
